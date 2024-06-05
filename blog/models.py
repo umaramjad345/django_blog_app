@@ -9,6 +9,9 @@ class Category(models.Model):
     image = models.ImageField(upload_to='category/')
     date = models.DateTimeField(auto_now_add=True, null=True)
 
+    def __str__(self):
+        return self.title
+
 
 # Create Post Model
 class Post(models.Model):
