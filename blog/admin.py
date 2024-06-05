@@ -3,6 +3,7 @@ from .models import *
 
 # Register your models here.
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['image_tag','cat_id','title','url', 'date']
     search_fields = ['cat_id','title']
