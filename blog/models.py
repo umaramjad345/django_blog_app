@@ -21,3 +21,6 @@ class Post(models.Model):
     url = models.CharField(max_length=100)
     cat = models.ForeignKey(Category, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='post/')
+
+    def __str__(self):
+        return self.title
