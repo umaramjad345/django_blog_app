@@ -28,7 +28,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='post/')
 
     def image_tag(self):
-        return format_html('<img src="/media/{}" style="width:50px; height:50px; border-radius:50% />'.format(self.image))
+        return format_html('<img src="/media/{}" style="width:50px; height:50px; border-radius:50%" />'.format(self.image))
 
     def __str__(self):
         return self.title
