@@ -1,14 +1,44 @@
 <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand">My Blog</a>
-    <form class="d-flex" role="search">
-      <input
-        class="form-control me-2"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+    <ul
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        list-style: none;
+      "
+    >
+      <li>
+        <a
+          href=""
+          style="
+            padding: 8px 13px;
+            background-color: rgb(78, 78, 248);
+            color: white;
+            border-radius: 5px;
+          "
+          >About</a
+        >
+      </li>
+      <li><a href="">Admin</a></li>
+      <li style="position: relative">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Dropdown link
+        </a>
+        <ul class="dropdown-menu" style="position: absolute">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </nav>
