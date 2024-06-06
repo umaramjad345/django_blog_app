@@ -17,11 +17,8 @@ class PostAdmin(admin.ModelAdmin):
     list_per_page= 5
     list_filter= ['cat']
 
-    class Media:
-        js = ('https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js', 'js/script.js',)
-
 admin.site.register(Category,CategoryAdmin)
 admin.site.register(Post,PostAdmin)
 
 admin.site.unregister(Group)
-admin.site.unregister(User)
+# admin.site.unregister(User)
