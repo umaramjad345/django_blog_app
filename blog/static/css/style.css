@@ -1,0 +1,49 @@
+nav {
+  padding: 15px 0px;
+  background-color: aliceblue;
+  border-bottom: 1px solid rgb(221, 220, 220);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navBrand {
+  text-decoration: none;
+  color: rgb(78, 78, 248);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.navList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  list-style: none;
+}
+
+.navBtn {
+  padding: 8px 13px;
+  background-color: rgb(78, 78, 248);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bottomFooter {
+  background-color: aliceblue;
+}
+
+.postBtn {
+  padding: 8px 13px;
+  background-color: rgb(78, 78, 248);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  display: block;
+  margin-top: 15px;
+}

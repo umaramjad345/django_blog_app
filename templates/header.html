@@ -1,31 +1,14 @@
-<nav class="navbar bg-body-tertiary">
+<nav>
   <div class="container">
-    <a class="navbar-brand">My Blog</a>
-    <ul
-      style="
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 15px;
-        list-style: none;
-      "
-    >
+    <a class="navBrand">ZBlog</a>
+    <ul class="navList">
       <li>
-        <a
-          href=""
-          style="
-            padding: 8px 13px;
-            background-color: rgb(78, 78, 248);
-            color: white;
-            border-radius: 5px;
-          "
-          >About</a
-        >
+        <a class="navBtn">About</a>
       </li>
-      <li><a href="">Admin</a></li>
+      <li><a class="navBtn">Admin</a></li>
       <li style="position: relative">
         <a
-          class="nav-link dropdown-toggle"
+          class="nav-link dropdown-toggle navBtn"
           href="#"
           role="button"
           data-bs-toggle="dropdown"
@@ -33,7 +16,7 @@
         >
           Dropdown link
         </a>
-        <ul class="dropdown-menu" style="position: absolute">
+        <ul class="dropdown-menu" class="navDropdown">
           <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
           <li><a class="dropdown-item" href="#">Something else here</a></li>
