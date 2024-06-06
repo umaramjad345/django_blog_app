@@ -4,12 +4,20 @@ from .models import *
 
 # Create your views here.
 def home(request):
-    posts = Post.objects.all()
-    print(posts)
-    return render(request, 'home.html',{'posts':posts})
+    posts = Post.objects.all()[:11]
+    cats = Category.objects.all()
+    data = {
+        'posts': posts,
+        'cats': cats
+    }
+    return render(request, 'home.html', data)
 
-def post(request):
-    return HttpResponse("<h2>This is Post Page</h2>")
+def post(request, url):
+    post = Post.objects.get(url=url)
+    cats = Category.objects.all()
+    return render(request, 'posts.html', {'post': post, 'cats': cats})
 
-def category(request):
-    return HttpResponse("<h2>This is Category Page</h2>")
+def category(request, url):
+    cat = Category.objects.get(url=url)
+    posts = Post.objects.filter(cat=cat)
+    return render(request, "category.html", {'cat': cat, 'posts': posts})

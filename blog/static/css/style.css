@@ -4,11 +4,7 @@ nav {
   border-bottom: 1px solid rgb(221, 220, 220);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
 }
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .navBrand {
   text-decoration: none;
   color: rgb(78, 78, 248);

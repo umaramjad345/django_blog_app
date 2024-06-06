@@ -1,5 +1,8 @@
 <nav>
-  <div class="container">
+  <div
+    class="container"
+    style="display: flex; justify-content: space-between; align-items: center"
+  >
     <a class="navBrand">ZBlog</a>
     <ul class="navList">
       <li>
@@ -17,9 +20,21 @@
           Dropdown link
         </a>
         <ul class="dropdown-menu" class="navDropdown">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+          {% for cat in cats %}
+          <li>
+            <a
+              href="/category/{{cat.url}}"
+              style="
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 500;
+                padding: 5px;
+                margin: 10px 5px;
+              "
+              >{{cat.title}}</a
+            >
+          </li>
+          {% endfor %}
         </ul>
       </li>
     </ul>
