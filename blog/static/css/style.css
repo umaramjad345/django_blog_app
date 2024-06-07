@@ -43,3 +43,18 @@ nav {
   display: block;
   margin-top: 15px;
 }
+
+.collection{
+  margin: 20px 0px; 
+}
+
+.collection .collection-item{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: gray;
+  font-weight: 500;
+  transition: all 300 ease-in-out;
+}
+.collection .collection-item:hover{
+  color: blue;
+}

@@ -18,6 +18,7 @@ Welcome to ZBlog
   </div>
 
   <div class="collection">
+    <h3 style="color: rgb(75, 74, 74);">Blogs on {{cat.title}}</h3>
     {%for p in posts %}
     <a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a>
     {% empty %}
