@@ -16,7 +16,8 @@ def home(request):
     return render(request, 'home.html', data)
 
 def post(request, url):
-    post = Post.objects.get(url=url)
+    print(url)
+    post = Post.objects.get(title=url)
     cats = Category.objects.all()
     return render(request, 'posts.html', {'post': post, 'cats': cats})
 
