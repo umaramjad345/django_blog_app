@@ -3,6 +3,6 @@ from .views import home, post, category
 
 urlpatterns = [
     path('home/', home),
-    path('blog/<slug:url>', post),
-    path('category/<slug:url>',category)
+    path('blog/<slug:url>/', post),
+    path('category/<slug:url>/',category)
 ]

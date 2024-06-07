@@ -2,9 +2,11 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from user.middlewares import is_authorized, auth
 
 # Create your views here.
 
+@is_authorized
 def register_view(request):
     if request.method == 'POST':
         first_name = request.POST.get('first_name')
@@ -29,6 +31,7 @@ def register_view(request):
 
     return render(request, 'user/register.html',{})
 
+@is_authorized
 def login_view(request):
     if request.method == "POST":
         username = request.POST.get('username')
@@ -36,18 +39,19 @@ def login_view(request):
          
         if not User.objects.filter(username=username).exists():
             messages.error(request, 'Invalid Username')
-            return redirect('/login/')
+            return redirect('/user/login/')
         
         user = authenticate(username=username, password=password)
         if user is None:
             messages.error(request, "Invalid Password")
-            return redirect('/login/')
+            return redirect('/user/login/')
         else:
             login(request, user)
             return redirect('/home/')
         
     return render(request, 'user/login.html',{})
 
+@auth
 def logout_view(request):
     logout(request)
     return redirect('/user/login/')

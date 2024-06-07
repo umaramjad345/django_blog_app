@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
+from user.middlewares import auth
 
 # Create your views here.
+
+@auth
 def home(request):
     posts = Post.objects.all()[:11]
-    print("The url of the post is ",posts[0].url)
     cats = Category.objects.all()
     data = {
         'posts': posts,
@@ -19,6 +21,7 @@ def post(request, url):
     return render(request, 'posts.html', {'post': post, 'cats': cats})
 
 def category(request, url):
-    cat = Category.objects.get(url=url)
+    category_name = url.split('/')[-1]
+    cat = Category.objects.get(url=f"{category_name}/")
     posts = Post.objects.filter(cat=cat)
     return render(request, "category.html", {'cat': cat, 'posts': posts})

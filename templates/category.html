@@ -6,13 +6,13 @@ Welcome to ZBlog
 
 {% block content%}
 
-<div>
-  <h3>{{cat.title}}</h3>
+<div class="container">
+  <h3 style="margin: 20px 0px; font-weight: 600; font-style: italic; color: blue;">{{cat.title}}</h3>
   <div class="img-container">
     <img
       src="/media/{{cat.image}}"
       class="responsive-img"
-      style="max-height: 450px; width: 100%; object-fit: cover"
+      style="max-height: 450px; width: 100%; object-fit: cover; border-radius: 10px;"
       alt=""
     />
   </div>
