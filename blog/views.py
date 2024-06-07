@@ -26,3 +26,6 @@ def category(request, url):
     cat = Category.objects.get(url=f"{category_name}/")
     posts = Post.objects.filter(cat=cat)
     return render(request, "category.html", {'cat': cat, 'posts': posts})
+
+def about(request):
+    return render(request, 'about.html')
