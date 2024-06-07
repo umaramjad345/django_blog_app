@@ -5,6 +5,7 @@ from .models import *
 # Create your views here.
 def home(request):
     posts = Post.objects.all()[:11]
+    print("The url of the post is ",posts[0].url)
     cats = Category.objects.all()
     data = {
         'posts': posts,
